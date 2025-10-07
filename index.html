@@ -39,7 +39,7 @@
 
     .header-image {
       flex: 1;
-      max-width: 540px;           /* Perbesar area gambar header */
+      max-width: 540px;
       margin-left: 66px;
       border-radius: 16px;
       overflow: hidden;
@@ -54,7 +54,7 @@
     .cards-container {
       display: flex;
       justify-content: center;
-      gap: 44px;                  /* Jarak antar card lebih lebar */
+      gap: 44px;
       margin-top: 36px;
       flex-wrap: wrap;
     }
@@ -64,8 +64,8 @@
       border: 1.5px solid rgba(255,255,255,0.18);
       backdrop-filter: blur(8px);
       box-shadow: 0 6px 36px 0 rgba(31, 38, 135, 0.23);
-      padding:  52px 36px 36px 36px;  /* Padding lebih besar */
-      width: 520px;               /* Lebar card lebih besar */
+      padding:  52px 36px 36px 36px;
+      width: 520px;
       min-height: 560px;
       color: #dbe6fd;
       display: flex;
@@ -99,7 +99,7 @@
       letter-spacing: 1px;
     }
     .card-img {
-      width: 420px;              /* Gambar lebih besar */
+      width: 420px;
       height: 310px;
       background: rgba(255,255,255,0.10);
       border-radius: 10px;
@@ -173,19 +173,19 @@
       }
     }
     .header-content h1 {
-      font-size: 3.5rem; /* mengganti ukuran sebelumnya */
+      font-size: 3.5rem;
     }
     .header-content p {
-      font-size: 1.4rem; /* mengganti ukuran sebelumnya */
+      font-size: 1.4rem;
     }
     .card-title {
-      font-size: 2rem;  /* mengganti ukuran sebelumnya */
+      font-size: 2rem;
     }
     .card-description {
-      font-size: 1.25rem; /* mengganti ukuran sebelumnya */
+      font-size: 1.25rem;
     }
     .card-btn {
-      font-size: 1.15rem; /* mengganti ukuran sebelumnya */
+      font-size: 1.15rem;
     }
     /* Navbar */
     .navbar {
@@ -231,11 +231,9 @@
       display: inline-block;
     }
 
-    /* Ganti blok CSS .dropdown-content sebelumnya dengan ini */
     .dropdown-content {
-      /* Properti dasar tetap sama */
       position: absolute;
-      background-color: rgba(44, 62, 80, 0.95); 
+      background-color: rgba(44, 62, 80, 0.95);
       min-width: 180px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
       z-index: 1001;
@@ -245,19 +243,17 @@
       top: 100%;
       left: 0;
 
-      /* Properti untuk Animasi */
-      display: block; /* Kami tetap menggunakan display: block, tetapi akan disembunyikan dengan opacity */
-      opacity: 0; /* Mulai dengan transparan (tersembunyi) */
-      visibility: hidden; /* Sembunyikan dari interaksi mouse saat tersembunyi */
-      transform: translateY(-10px); /* Mulai 10px di atas posisi akhirnya */
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; /* Tentukan properti yang akan dianimasikan */
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
 
-    /* Tambahkan blok CSS ini untuk memunculkan dropdown saat hover */
     .dropdown:hover .dropdown-content {
-      opacity: 1; /* Transparansi penuh (terlihat) */
-      visibility: visible; /* Biarkan interaksi mouse */
-      transform: translateY(0); /* Pindahkan ke posisi akhir (turun 10px) */
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
     .dropdown-content a {
       color: #f5f6fa;
@@ -266,6 +262,7 @@
       display: block;
       font-weight: 400;
       transition: background-color 0.2s, color 0.2s;
+      cursor: pointer; /* Pastikan kursor pointer */
     }
 
     .dropdown-content a:hover {
@@ -285,25 +282,25 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8); /* Background gelap transparan */
-      display: none; /* Mulai tersembunyi */
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
       justify-content: center;
-      align-items: flex-start; /* Konten di atas */
+      align-items: flex-start;
       z-index: 2000;
-      overflow-y: auto; /* Bisa di-scroll jika kontennya panjang */
+      overflow-y: auto;
       padding: 40px 0;
       backdrop-filter: blur(5px);
     }
     .modal-content-glass {
       position: relative;
-      background: rgba(44, 62, 80, 0.8); /* Lebih solid dari glass biasa */
+      background: rgba(44, 62, 80, 0.8);
       border-radius: 20px;
       border: 2px solid rgba(255,255,255,0.3);
       backdrop-filter: blur(10px);
       box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.4);
       padding: 40px;
       width: 90%;
-      max-width: 1100px; /* Lebih lebar dari card */
+      max-width: 1100px;
       margin: 20px auto;
       color: #f5f6fa;
     }
@@ -325,6 +322,13 @@
       text-align: center;
       margin-bottom: 20px;
     }
+    .modal-content-glass .template-content {
+        padding: 30px;
+        border: 2px dashed rgba(255,255,255,0.4);
+        border-radius: 10px;
+        min-height: 250px;
+        text-align: center;
+    }
     /* Style khusus untuk Jadwal (jadwalsekolah.html) */
     .modal-content-glass .schedule-table table {
         width: 100%;
@@ -341,7 +345,7 @@
         color: white;
     }
     .modal-content-glass .schedule-table tr:nth-child(even) {
-        background-color: rgba(11, 8, 182, 0.2); /* Menyesuaikan background stripe */
+        background-color: rgba(11, 8, 182, 0.2);
     }
     /* Style khusus untuk About Me (about me Rafif Ahmad Darmawan.html) */
     .modal-content-glass .about-me-content .gede {
@@ -402,21 +406,21 @@
     }
      /* Style khusus untuk Lirik (lyrics.html) */
      .modal-content-glass .lyrics-content {
-        color: #f5f6fa; /* Mengganti warna merah asli agar terbaca */
+        color: #f5f6fa;
         text-align: center;
      }
-     .modal-content-glass .lyrics-content .chord { 
-        color: #74b9ff; /* Warna chord biru agar terbaca */
-        font-weight: bold; 
+     .modal-content-glass .lyrics-content .chord {
+        color: #74b9ff;
+        font-weight: bold;
     }
-     .modal-content-glass .lyrics-content pre { 
-        background: rgba(0, 0, 0, 0.5); 
-        padding: 1em; 
-        border-radius: 8px; 
+     .modal-content-glass .lyrics-content pre {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 1em;
+        border-radius: 8px;
         text-align: left;
         white-space: pre-wrap;
     }
-    .modal-content-glass .lyrics-content h1, .modal-content-glass .lyrics-content h2 { 
+    .modal-content-glass .lyrics-content h1, .modal-content-glass .lyrics-content h2 {
         color: #ffffff;
         text-align: center;
     }
@@ -427,7 +431,7 @@
         font-weight: bold;
     }
     .modal-content-glass .lyrics-content #audioPlayer {
-        display: none; /* Sembunyikan player asli */
+        display: none;
     }
     .modal-content-glass .lyrics-content img {
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -442,8 +446,8 @@
         <li class="dropdown">
             <a href="#" style="cursor: default;">Menghitung</a>
             <div class="dropdown-content">
-                <a href="luaspersegi.html">Luas Persegi</a> 
-                <a href="volumekotak.html">Volume Kotak</a>
+                <a onclick="showContent('luaspersegi');">Luas Persegi (Template)</a>
+                <a onclick="showContent('volumekotak');">Volume Kotak (Template)</a>
             </div>
         </li>
         <li><a href="index.html">Beranda</a></li>
@@ -452,7 +456,7 @@
         <li><a href="#" onclick="showContent('about-me'); return false;">Tentang Saya</a></li>
     </ul>
     </nav>
-  
+
     <div id="main-content">
       <div class="glass header">
       </div>
@@ -473,7 +477,7 @@
           <img src="6195082827029138337.jpg" alt="Header Image">
         </div>
       </div>
-    
+
       <div class="cards-container">
         <div class="card">
           <div class="card-title">Jadwal Sekolah</div>
@@ -491,7 +495,7 @@
           </div>
           <button class="card-btn" data-target="about-me">Selengkapnya</button>
         </div>
-        <div class="card">  
+        <div class="card">
           <div class="card-title">Lirik & chords lagu</div>
           <img class="card-img" src="e2bf24f4-5cda-4180-bb9f-56211a905947.jpeg" alt="Gambar Fitur 3">
           <div class="card-description">
@@ -500,7 +504,7 @@
           <button class="card-btn" data-target="lyrics">Selengkapnya</button>
         </div>
       </div>
-      </div>
+    </div>
 
     <div id="content-modal" class="modal-overlay">
         <div class="modal-content-glass">
@@ -508,6 +512,23 @@
             <div id="dynamic-content"></div>
         </div>
     </div>
+
+    <div id="luaspersegi-content" style="display: none;">
+        <h2>Template Luas Persegi</h2>
+        <div class="template-content">
+            <p style="font-size: 1.2rem;">Area ini adalah template yang didesain agar sesuai dengan tema utama (glassmorphism).</p>
+            <h3 style="color: #74b9ff; margin-top: 30px;">[ Tempat untuk menambahkan inputan dan hasil perhitungan Luas Persegi ]</h3>
+        </div>
+    </div>
+
+    <div id="volumekotak-content" style="display: none;">
+        <h2>Template Volume Kotak</h2>
+        <div class="template-content">
+            <p style="font-size: 1.2rem;">Area ini adalah template yang didesain agar sesuai dengan tema utama (glassmorphism).</p>
+            <h3 style="color: #74b9ff; margin-top: 30px;">[ Tempat untuk menambahkan inputan dan hasil perhitungan Volume Kotak ]</h3>
+        </div>
+    </div>
+
 
     <div id="jadwalsekolah-content" style="display: none;">
         <div class="schedule-table">
@@ -682,7 +703,7 @@
             <h1><span class="maintext">About Me:</span></h1>
             <p class="gede">Halo, nama saya Rafif Ahmad Darmawan</p>
             <p>
-                <img src="5DD4FEA6-F195-42F8-93B4-CB885ED022D3.jpg" />
+                <img src="Camera%20Roll/enhancethe-3115736611-14_04_04.png" alt="Foto Profil" />
             </p>
 
             <h1><span class="maintext">Profil Saya</span></h1>
@@ -796,7 +817,7 @@ I love you
 
         /**
          * Menampilkan konten dari ID yang diberikan di dalam modal.
-         * @param {string} contentId - ID dari div yang berisi konten tersembunyi (misalnya 'jadwalsekolah').
+         * @param {string} contentId - ID dari div yang berisi konten tersembunyi.
          */
         function showContent(contentId) {
             // Ambil konten dari elemen tersembunyi
@@ -836,10 +857,10 @@ I love you
             }
         }
 
-        // Ripple effect, loading logic, dan pemicu modal untuk setiap tombol
+        // Ripple effect, loading logic, dan pemicu modal untuk setiap tombol Card
         document.querySelectorAll('.card-btn').forEach(button => {
             button.addEventListener('click', function(e) {
-                e.preventDefault(); // Mencegah perilaku default jika ada link
+                e.preventDefault();
 
                 // Ripple
                 const circle = document.createElement('span');
@@ -893,5 +914,4 @@ I love you
         });
     </script>
 </body>
-
 </html>
